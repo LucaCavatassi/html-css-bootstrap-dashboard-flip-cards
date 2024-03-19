@@ -1,0 +1,29 @@
+.ms_flip-box {
+    background-color: transparent;
+    perspective: 1000px;
+  }
+  
+.ms_flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.ms_flip-box:hover .ms_flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+.ms_flip-box-front, .ms_flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.ms_flip-box-back {
+    transform: rotateY(180deg);
+}
+  
